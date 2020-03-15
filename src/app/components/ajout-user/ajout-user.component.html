@@ -1,0 +1,62 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag —-------->
+
+<html>
+  <head>
+    <title>VHEG Overses Educational Fair Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!----> Include jQuery —>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!----> Include Date Range Picker —>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+  </head>
+  <body>
+    <div class="container register-form top-buffer-1">
+      <div class="form">
+        <div class="note">
+        <p>Creation d'un Utilisateur</p>
+        </div>
+     <div class="form-content bk">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <fieldset class="scheduler-border">
+            <legend class="scheduler-border">Creation d'un Utilisateur</legend>
+            <div class="row">
+              <div class="col-SM-5">
+                <label for="fname">Username</label>
+                <input type="name" class="form-control" id="fmane" placeholder="Username" name="fname" formControlName="username">
+              </div>
+              <div class="col-sm-5">
+                <label for="lname">Password</label>
+                <input type="name" class="form-control" id="fmane" placeholder="Password" name="lname" formControlName="password">
+              </div>
+                                                        <div class="col-sm-5">
+                <label for="lname">Profile</label>
+                <select class="form-control " id="sel1 " name="lname" formControlName="profile">
+                  <option  name="lname" *ngFor="let profile of profile"  [value]="profile.id">{{ profile.libelle }}</option>
+                </select>
+              </div>
+            </div>
+
+          </fieldset>
+                                     <div class="col-sm-5">
+                <label for="lname"></label>
+                <button class="btn btn-success ">Creer utilisateur</button>
+              </div>
+
+        </form>
+      </div>
+      </div>
+      </div>
+  </body>
+</html>

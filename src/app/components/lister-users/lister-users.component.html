@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Profile</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of dataUsers">
+            <th>{{user.id}}</th>
+            <td>{{user.username}}</td>
+            <td>{{user.roles }}</td>
+            <td>
+                <div   *ngIf="user.isActive; else elseBlock">
+                  <button class="btn btn-succees" ([ngModel])="user.isActive" (click)="onStatus(user.id,user.isActive)">Active</button>  
+                </div>
+                <ng-template #elseBlock>
+                  <button class="btn btn-danger" ([ngModel])="user.isActive" (click)="onStatus(user.id,user.isActive)">Deactive</button> 
+                </ng-template>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+</div>

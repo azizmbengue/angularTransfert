@@ -1,0 +1,17 @@
+<app-form-connexion></app-form-connexion>
+<br>
+<button (click)='onRoles()'>affiche roles</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>libelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roles">
+            <td scope="row">{{ role.id }}</td>
+            <td>{{ role.libelle }}</td>
+        </tr>
+    </tbody>
+</table>
